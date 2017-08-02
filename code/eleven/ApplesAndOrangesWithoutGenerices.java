@@ -5,7 +5,7 @@
 package eleven;
 
 import java.util.ArrayList;
-
+import static utils.Print.*;
 class Apple{
 	private static long counter;
 	private final long id=counter++;
@@ -14,20 +14,47 @@ class Apple{
 	}
 }
 class Oranger{}
+class Gala extends Apple{}
+class Fuji extends Apple{}
 
 public class ApplesAndOrangesWithoutGenerices {
 
 	@SuppressWarnings("unchecked")//表示只有有关 不接受检查的异常的 警告信息应该被抑制
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ArrayList apples=new ArrayList();
-		for(int i=0;i<3;i++) {
-			apples.add(new Apple());
+//		ArrayList apples=new ArrayList();
+//		for(int i=0;i<3;i++) {
+//			apples.add(new Apple());
+//		}
+//		apples.add(new Oranger());
+//		for(int i=0;i<apples.size();i++) {
+//			((Apple) apples.get(i)).id();
+//		}
+		
+		
+//		ArrayList<Apple> apples=new ArrayList<Apple>();
+//		for(int i=0;i<3;i++) {
+//			apples.add(new Apple());
+//		}
+//		//编译时报错
+////		apples.add(new Oranger());
+//		for(int i=0;i<apples.size();i++) {
+//			System.out.println(apples.get(i).id());//类型转换也不是必须的 因为list知道它保存的是什么类型它会在调用get方法的时候自动帮我们转型
+//		}
+//		for(Apple a:apples) {
+//			printLn(a.id());
+//		}
+		
+		//向上转型也可以作用于泛型
+		
+		ArrayList<Apple> apples=new ArrayList<Apple>();
+		apples.add(new Gala());
+		apples.add(new Apple());
+		apples.add(new Fuji());
+		for(Apple a:apples) {
+			printLn(a.id());
 		}
-		apples.add(new Oranger());
-		for(int i=0;i<apples.size();i++) {
-			((Apple) apples.get(i)).id();
-		}
+		
 	}
 }
 /*因为arraylist类保存的是object这个类 所以不仅可以添加apple 还可以添加oranger类

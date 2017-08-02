@@ -25,7 +25,6 @@ public class ListFectures {
 		// TODO Auto-generated method stub
 		Random rand=new Random(47);
 		List<Apple> list=new ArrayList<>();
-		list.
 		
 	}
 

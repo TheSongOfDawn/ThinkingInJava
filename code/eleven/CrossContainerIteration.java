@@ -11,6 +11,11 @@
  * 因为我没有重写xxd类里的某些方法 这里只做大概的测试
 */
 
+/*
+ * LinkedList实现了基本的list接口 但它执行某些操作 在list中插入和移除时比ArrayList 更高效 但在随机访问操作方面却要逊色一些
+ * 
+ * 
+ * */
 
 
 
@@ -20,11 +25,12 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
 
 import static utils.Print.*;
 
-class xxd {
+class xxd  {
 	private int id = 0;
 	private Random rd = new Random();
 
@@ -77,6 +83,4 @@ public class CrossContainerIteration {
  * 
  * it.hasNext() 相对于当前位置的前一个
  * it.hasPrevious 相对于当前位置的后一个
- * 
- * 
  * */

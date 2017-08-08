@@ -19,3 +19,6 @@
 	10.@throws fully-qualified-class-name description 异常
 	11.deprecated 指出一些旧特性已由新特性取代 建议用户不要使用这些旧特性 
 10. 编码风格 类名大驼峰，其余的小驼峰
+String:
+	用于String的 + 与+=是JAVA中仅有的两个重载过的操作符 JAVA中并不允许程序员重载任何操作符
+	操作符+ 可以用来连接String
